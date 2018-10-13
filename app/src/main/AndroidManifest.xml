@@ -15,10 +15,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".DetailsActivity" >
+        </activity>
 
         <activity
             android:name="com.marakana.android.yamba.StatusActivity"
-            android:label="@string/status_update" />
+            android:label="@string/status_update">
+            <intent-filter>
+                <action android:name="com.marakana.android.yamba.action.tweet" />
+                <category android:name = "android.intent.category.DEFAULT"/>
+            </intent-filter>
+         </activity>
+
 
         <activity android:name="com.marakana.android.yamba.MainActivity">
             <intent-filter>
