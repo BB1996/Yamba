@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_tweet"
+        android:icon="@android:drawable/ic_menu_add"
+        android:title="@string/tweet"
+        app:showAsAction="always|withText" />
+    <item
+        android:id="@+id/action_refresh"
+        android:icon="@android:drawable/ic_menu_rotate"
+        android:title="@string/refresh"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_purge"
+        android:icon="@android:drawable/ic_menu_delete"
+        android:title="@string/purge" />
+    <!--<item-->
+    <!--android:id="@+id/itemPrefs"-->
+    <!--android:title="@string/titlePrefs"-->
+    <!--android:icon="@android:drawable/ic_menu_preferences" />-->
+    <!--<item-->
+    <!--android:id="@+id/titleRefresh"-->
+    <!--android:title="@string/itemServiceStart"-->
+    <!--android:icon="@android:drawable/ic_menu_rotate" />-->
+
+</menu>
