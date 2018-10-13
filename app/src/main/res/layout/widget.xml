@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/list_item_content"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@android:drawable/dialog_holo_dark_frame"
+    android:descendantFocusability="blocksDescendants">
 
     <TextView
         android:id="@+id/list_item_text_user"
@@ -11,29 +13,25 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:text="@string/slashdot"
-        tools:textAppearance="?android:attr/textAppearanceMedium" />
-
+        android:textAppearance="?android:attr/textAppearanceMedium" />
     <TextView
         android:id="@+id/list_item_text_created_at"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@id/list_item_text_user"
-        android:layout_alignBottom="@id/list_item_text_user"
+        android:layout_alignBaseline="@+id/list_item_text_user"
+        android:layout_alignBottom="@+id/list_item_text_user"
         android:layout_alignParentEnd="true"
         android:text="@string/_10_minutes_ago"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="@android:color/secondary_text_light"
-        />
-
+        android:textAppearance="?android:attr/textAppearanceSmall" />
     <TextView
         android:id="@+id/list_item_text_message"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/list_item_text_created_at"
         android:layout_alignParentStart="true"
+        android:layout_below="@+id/list_item_text_created_at"
         android:autoLink="web"
-        android:linksClickable="false"
-        android:text="@string/android_1"
+        android:focusable="false"
+        android:linksClickable="true"
+        android:text="@string/andriod_just_became_the_1_os_on_the_planet_take_that_microsoft_http_t_co_123"
         android:textAppearance="?android:attr/textAppearanceSmall" />
-
 </RelativeLayout>
