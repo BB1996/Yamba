@@ -3,7 +3,7 @@
     android:id="@+id/list_item_content"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:drawable/dialog_holo_dark_frame"
+    android:background="@android:drawable/dialog_holo_light_frame"
     android:descendantFocusability="blocksDescendants">
 
     <TextView

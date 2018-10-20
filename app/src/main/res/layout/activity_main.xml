@@ -2,23 +2,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity" >
+    tools:context=".MainActivity"
+    android:baselineAligned="false">
 
     <fragment
         android:id="@+id/fragment_timeline"
         android:name="com.marakana.android.yamba.TimelineFragment"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        tools:layout="@android:layout/list_content"/>
-    <fragment
-        android:id="@+id/fragment_details"
-        android:name="com.marakana.android.yamba.DetailsFragment"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        tools:layout="@layout/list_item"
-        />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!--<fragment-->
+        <!--android:id="@+id/fragment_details"-->
+        <!--android:name="com.marakana.android.yamba.DetailsFragment"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="1"-->
+        <!--tools:layout="@layout/list_item" />-->
 
 
 </LinearLayout>

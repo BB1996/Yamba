@@ -17,6 +17,8 @@ import android.widget.SimpleCursorAdapter.ViewBinder;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import static com.marakana.android.yamba.R.id.fragment_details;
+
 public class TimelineFragment extends ListFragment implements
         LoaderManager.LoaderCallbacks<Cursor> {
     private static final String TAG = TimelineFragment.class.getSimpleName();
