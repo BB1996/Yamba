@@ -3,8 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.marakana.android.yamba">
 
+
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -51,9 +53,17 @@
             android:authorities="com.marakana.android.yamba.StatusProvider"
             android:exported="false" />
 
-        <receiver android:name=".BootReceiver">
+        <receiver android:name="com.marakana.android.yamba.BootReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="com.marakana.android.yamba.NotificationReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.marakana.android.yamba.action.NEW_STATUSES" />
             </intent-filter>
         </receiver>
 

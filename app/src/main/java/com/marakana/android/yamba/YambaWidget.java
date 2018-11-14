@@ -7,6 +7,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Color;
 import android.text.format.DateUtils;
 import android.util.Log;
 import android.widget.RemoteViews;
@@ -39,7 +40,7 @@ public class YambaWidget extends AppWidgetProvider {
 
         for(int appWidgetId : appWidgetIds){
             RemoteViews view = new RemoteViews(context.getPackageName(),R.layout.widget);
-
+            //view.setInt(R.id.list_item_content, "setBackgroundColor", Color.GREEN);
             view.setTextViewText(R.id.list_item_text_user,user);
             view.setTextViewText(R.id.list_item_text_message,message);
             view.setTextViewText(R.id.list_item_text_created_at,DateUtils.getRelativeTimeSpanString(createdAt));

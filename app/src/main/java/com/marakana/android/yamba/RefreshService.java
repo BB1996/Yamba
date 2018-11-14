@@ -41,7 +41,7 @@ public class RefreshService extends IntentService {
             Toast.makeText(this, "Please update your username and password", Toast.LENGTH_LONG).show();
             return;
         }
-        Log.d(TAG, "onStarted");
+        Log.d(TAG, "Service onStarted");
 
         DbHelper dbHelper = new DbHelper(this);
         SQLiteDatabase db = dbHelper.getWritableDatabase();
@@ -69,6 +69,7 @@ public class RefreshService extends IntentService {
             }
             if (count > 0) {
                 sendBroadcast(new Intent("com.marakana.android.yamba.action.NEW_STATUSES").putExtra("count", count));
+
             }
         } catch (YambaClientException e) {
             Log.e(TAG, "Failed to fetch the timeline", e);

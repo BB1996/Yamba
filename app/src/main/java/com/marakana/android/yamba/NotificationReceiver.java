@@ -10,10 +10,12 @@ import android.content.Intent;
 public class NotificationReceiver extends BroadcastReceiver {
     public static final int NOTIFICATION_ID = 42;
 
+
     @Override
     public void onReceive(Context context, Intent intent) {
         NotificationManager notificationManager = (NotificationManager)
                 context.getSystemService(Context.NOTIFICATION_SERVICE);
+
         int count = intent.getIntExtra("count", 0);
 
         PendingIntent operation = PendingIntent.getActivity(context, -1,
