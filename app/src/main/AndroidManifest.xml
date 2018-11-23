@@ -45,8 +45,7 @@
 
 
         <service
-            android:name="com.marakana.android.yamba.RefreshService"
-            android:exported="false" />
+            android:name="com.marakana.android.yamba.RefreshService" />
 
         <provider
             android:name="com.marakana.android.yamba.StatusProvider"
@@ -56,6 +55,9 @@
         <receiver android:name="com.marakana.android.yamba.BootReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.marakana.android.yamba.action.UPDATED_INTERVAL" />
             </intent-filter>
         </receiver>
 
@@ -82,8 +84,18 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/yamba_widget" />
         </receiver>
-
-
+        <service
+            android:label="@string/app_name"
+            android:icon="@drawable/ic_launcher"
+            android:name=".YambaWallpaper"
+            android:permission="android.permission.BIND_WALLPAPER">
+            <intent-filter>
+                <action
+                    android:name="android.service.wallpaper.WallpaperService" />
+            </intent-filter>
+            <meta-data android:name="android.service.wallpaper"
+                android:resource="@xml/wallpaper" />
+        </service>
     </application>
 
 </manifest>

@@ -1,11 +1,14 @@
 package com.marakana.android.yamba;
 
+import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
 
 public class SettingsFragment extends PreferenceFragment implements SharedPreferences.OnSharedPreferenceChangeListener {
+
 
     private SharedPreferences prefs;
 
@@ -20,6 +23,7 @@ public class SettingsFragment extends PreferenceFragment implements SharedPrefer
         super.onStart();
         prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
         prefs.registerOnSharedPreferenceChangeListener(this);
+
     }
 
     @Override

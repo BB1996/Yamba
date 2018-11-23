@@ -17,7 +17,6 @@
     <string name="_10_minutes_ago">10 minutes ago</string>
     <string name="android_1">Android #1</string>
     <string name="andriod_just_became_the_1_os_on_the_planet_take_that_microsoft_http_t_co_123">Andriod just became the #1 OS on the planet. Take that, Microsoft! http://t.co/123</string>
-    <string name="interval_key">interval</string>
     <string name="interval_summary">How frequently should data refresh?</string>
-    <string name="interval">Refresh interval</string>
+    <string name="interval_title">Refresh interval</string>
 </resources>
